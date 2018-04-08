@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/W32TeX)  (format=lualatex 2018.4.1)  8 APR 2018 14:25
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/W32TeX)  (format=lualatex 2018.4.1)  8 APR 2018 16:25
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.191 seconds
+luaotfload | main : initialization completed in 0.391 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (./header.tex (c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2017/09/07 v3.24 KOMA-Script document class (article)
@@ -2681,7 +2681,10 @@ Package biblatex Info: ... file 'german.lbx' found.
  (c:/texlive/2017/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 File: german.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
 )
-(./main.aux)
+(./main.aux
+luatex-hyphen: loading patterns and exceptions for: german (\language4)
+luatex-hyphen: info: no hyphenation exceptions for this language
+Language ngerman already loaded; id is 8)
 \openout1 = main.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -2924,19 +2927,15 @@ luaotfload | aux : font no 69 (nil) does not define feature vrt2 for script hani
 luaotfload | aux : no font with id 69
 LaTeX Font Info:    Font shape `JY3/MSMincho(0)/bx/n' will be
 (Font)              scaled to size 9.6222pt on input line 3.
-(save: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular
-.lua)(save: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-re
-gular.luc)(save: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroma
-n5-regular.lua)(save: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/l
-mroman5-regular.luc))
+(load luc: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-reg
+ular.luc)(load luc: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmr
+oman5-regular.luc))
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 29.
  [1
 
 {c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 29.
  (./main.aux
-luatex-hyphen: loading patterns and exceptions for: german (\language4)
-luatex-hyphen: info: no hyphenation exceptions for this language
 Language ngerman already loaded; id is 8)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 29.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 29.
@@ -2945,7 +2944,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 29.
 Package rerunfilecheck Warning: File `main.aux' has changed. Rerun.
 
 Package rerunfilecheck Info: Checksums for `main.aux':
-(rerunfilecheck)             Before: 178837AC15F9BB291A48DF1A0288B7FA;796
+(rerunfilecheck)             Before: 058507AEBA10F9602E327F48B2137077;1736
 (rerunfilecheck)             After:  C31C5A1C3606B78F32B09B767931EB2E;1704.
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2953,9 +2952,6 @@ LaTeX Font Warning: Size substitutions with differences
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 

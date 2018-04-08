@@ -36,3 +36,11 @@ while j < len(data[0]):
         i+=1
     j+=1
 table.write("    \\bottomrule \n  \end{tabular}\n\end{table}")
+table.close()
+table=open("table.tex", "r")
+table2=open("table2.tex", "w")
+for line in table:
+    line=line.replace(".", ",")
+    table2.write(line)
+table.close()
+table2.close()

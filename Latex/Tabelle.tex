@@ -1,0 +1,26 @@
+\section{Tabelle}
+ % \begin{table}[H]
+ %   \centering
+ %   \caption{DV-Liste}
+ %   \label{tab:DV1}
+ %   \begin{tabular}{S S S S S S S S S S S }
+ %     \toprule
+ %       {$Pokedexnummer$} & {$Name$} & {$Icon$} & {$OT$} & {$ID$} & {$SID$} & {$Wesen$} & {$Fähigkeit$} & {$DVs$} & {$EVs$} & {$Kraftreserve$} \\
+ %     \midrule
+ %     68 & {Machomei} & {Icon} & {Lance} & 52295 & 01713 & {Adamant} & No_Guard & 31/31/31/31/31/31 & 100/252/2/0/140/16 & Dark \\
+ %     \bottomrule
+ %   \end{tabular}
+ % \end{table}
+ \begin{table}
+   \centering
+   \resizebox{\columnwidth}{!}{%}
+   \begin{tabular}{c c c c c c c c c c c c c c  c c c c c c c c c c c}
+    \multirow{2}{*}{Dexnummer} & \multirow{2}{*}{Name} & \multirow{2}{*}{Icon} & \multirow{2}{*}{Ball} & \multirow{2}{*}{OT} & \multirow{2}{*}{ID} & \multirow{2}{*}{Wesen} & \multirow{2}{*}{Fähigkeit} &\multicolumn{6}{c}{DVs} & \multirow{2}{*}{Kraftreserve} & \multicolumn{6}{c} {EVs} &\multicolumn{4}{c}{Attacken} \\
+    & & & & & & & &{KP} & {Ang} & {Def} & {SAng} & {SVert} & {Init} & &{KP} & {Ang} & {Def} & {SAng} & {SVert} & {Init} & \#1 & \#2 & \#3 & \#4 \\
+    \midrule
+
+      \input{/Users/Lars/Documents/DV-Liste/Python/Latexcode.tex}
+
+    \end{tabular}
+    }
+\end{table}

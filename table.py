@@ -53,3 +53,17 @@ while j < len(data[0]):
     j+=1
 table.write("    \\bottomrule \n  \end{tabular}\n\end{table}")
 table.close()
+
+i=0
+data=open("data.txt", "r")
+for line in data:
+    array[i]=str(line.replace(",", "."))
+    i+=1
+data.close()
+
+data=open("data.txt", "w")
+i=0
+while i < len(array):
+    data.write(array[i])
+    i+=1
+data.close()

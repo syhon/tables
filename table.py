@@ -1,24 +1,29 @@
 import numpy as np
+
+print("Bitte Dateinamen eingeben (ohne Endung): ")
+datainput=input()
+datafile=str(datainput)+".txt"
+datatex=str(datainput)+".tex"
 array=[]
 i=0
-data=open("data.txt", "r")
+data=open(datafile, "r")
 for line in data:
     array.extend([None]);
     array[i]=str(line.replace(".", ","))
     i+=1
 data.close()
 
-data=open("data.txt", "w")
+data=open(datafile, "w")
 i=0
 while i < len(array):
     data.write(array[i])
     i+=1
 data.close()
 
-data=np.genfromtxt("data.txt", unpack=True, dtype="U12")
+data=np.genfromtxt(datafile, unpack=True, dtype="U12")
 #Länge der Spalten: len(data[i])
 #Länge der Zeilen: len(data)
-table=open("table.tex", "w")
+table=open(datatex, "w")
 table.write("\\begin{table}[H] \n   \centering \n   \caption{name} \n   \label{tab:name} \n   \\begin{tabular} ")
 i=0
 table.write("{ ")
@@ -55,13 +60,13 @@ table.write("    \\bottomrule \n  \end{tabular}\n\end{table}")
 table.close()
 
 i=0
-data=open("data.txt", "r")
+data=open(datafile, "r")
 for line in data:
     array[i]=str(line.replace(",", "."))
     i+=1
 data.close()
 
-data=open("data.txt", "w")
+data=open(datafile, "w")
 i=0
 while i < len(array):
     data.write(array[i])

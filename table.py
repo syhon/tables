@@ -53,3 +53,4 @@ while j < len(data[0]):
     j+=1
 table.write("    \\bottomrule \n  \end{tabular}\n\end{table}")
 table.close()
+ 

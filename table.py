@@ -1,4 +1,20 @@
 import numpy as np
+array=[]
+i=0
+data=open("data.txt", "r")
+for line in data:
+    array.extend([None]);
+    array[i]=str(line.replace(".", ","))
+    i+=1
+data.close()
+
+data=open("data.txt", "w")
+i=0
+while i < len(array):
+    data.write(array[i])
+    i+=1
+data.close()
+
 data=np.genfromtxt("data.txt", unpack=True, dtype="U12")
 #Länge der Spalten: len(data[i])
 #Länge der Zeilen: len(data)
@@ -37,10 +53,3 @@ while j < len(data[0]):
     j+=1
 table.write("    \\bottomrule \n  \end{tabular}\n\end{table}")
 table.close()
-table=open("table.tex", "r")
-table2=open("table2.tex", "w")
-for line in table:
-    line=line.replace(".", ",")
-    table2.write(line)
-table.close()
-table2.close()

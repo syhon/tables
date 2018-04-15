@@ -73,9 +73,9 @@ while True:
        i+=1
    data.close()
    print('Done. \n \n')
-   print('Bitte weitere Dateinamen eingeben. Um das Programm zu beenden "e" eingeben.')
+   print('Bitte weitere Dateinamen eingeben. Um das Programm zu beenden Leerzeichen " " eingeben.')
    datainput=input()
-   if datainput=="e":
+   if datainput==" ":
        break
    else:
     datafile=datainput+".txt"
